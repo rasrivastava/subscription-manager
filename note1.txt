@@ -20,3 +20,28 @@ Sets the minor (Y-stream) release version to use (6.3)
 1. subscription-manager release --set=7.3 .... 
 2. yum clean all....
 3. yum install kernel-3.10.0-514.el7 => this will also install, let me give a test
+
+--------------------------------------------------------------------------------------------------
+
+Installed kernel => 3.10.0-862.el7
+
+CASE 1
+
+EUS rhel repo enable=> rhel-7-server-eus-rpms
+Release set => 7.6
+# yum update kernel => 3.10.0-957.48.1.el7
+
+CASE 2
+
+EUS rhel repo enable=> rhel-7-server-eus-rpms
+Release set => 7.6
+# yum update 3.10.0-862.51.1.el7 => No package 3.10.0-862.51.1.el7 available
+
+CASE 3
+
+EUS rhel repo enable=> rhel-7-server-eus-rpms
+Release set => not set
+# yum update kernel => 3.10.0-1127.el7
+
+--------------------------------------------------------------------------------------
+

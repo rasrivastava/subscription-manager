@@ -1,0 +1,22 @@
+1) Redhat subscription
+   
+- subscription-manager register --username XXX --password XXX --auto-attach --force
+ - subscription-manager attach --pool=8a85f9833e1404a9013e3cddf95a0599
+
+
+# subscription-manager release --set=6.3
+ 
+Sets the minor (Y-stream) release version to use (6.3)
+
+# subscription-manager release --unset
+
+ Removes any previously set release version preference
+
+
+1. subscription-manager release --unset
+2. yum clean all
+3. yum install kernel-3.10.0-514.el7
+
+1. subscription-manager release --set=7.3 .... 
+2. yum clean all....
+3. yum install kernel-3.10.0-514.el7 => this will also install, let me give a test
